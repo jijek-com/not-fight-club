@@ -1,35 +1,35 @@
 export const avatars = [
     {
         id: 0,
-        src: './../assets/images/avatars/afrodita.png',
+        src: './assets/images/avatars/afrodita.png',
     },
     {
         id: 1,
-        src: './../assets/images/avatars/apollon.png',
+        src: './assets/images/avatars/apollon.png',
     },
     {
         id: 2,
-        src: './../assets/images/avatars/demetra.png',
+        src: './assets/images/avatars/demetra.png',
     },
     {
         id: 3,
-        src: './../assets/images/avatars/gera.png',
+        src: './assets/images/avatars/gera.png',
     },
     {
         id: 4,
-        src: './../assets/images/avatars/poseidon.png',
+        src: './assets/images/avatars/poseidon.png',
     },
     {
         id: 5,
-        src: './../assets/images/avatars/zevs.png',
+        src: './assets/images/avatars/zevs.png',
     },
     {
         id: 6,
-        src: './../assets/images/avatars/herakl.png',
+        src: './assets/images/avatars/herakl.png',
     },
     {
         id: 7,
-        src: './../assets/images/avatars/helios.png',
+        src: './assets/images/avatars/helios.png',
     }
 ]
 
@@ -43,7 +43,7 @@ export const enemies = [
         critMultiplier: 1.5,
         attackCount: 1,
         blockCount: 3,
-        src: './../assets/images/enemies/kentavr.png',
+        src: './assets/images/enemies/kentavr.png',
     },
     {
         id: 1,
@@ -54,7 +54,7 @@ export const enemies = [
         critMultiplier: 1,
         attackCount: 3,
         blockCount: 2,
-        src: './../assets/images/enemies/meduza.png',
+        src: './assets/images/enemies/meduza.png',
     },
     {
         id: 2,
@@ -65,7 +65,7 @@ export const enemies = [
         critMultiplier: 2,
         attackCount: 1,
         blockCount: 3,
-        src: './../assets/images/enemies/ziklop.png',
+        src: './assets/images/enemies/ziklop.png',
     },
     {
         id: 3,
@@ -76,7 +76,7 @@ export const enemies = [
         critMultiplier: 1.5,
         attackCount: 2,
         blockCount: 2,
-        src: './../assets/images/enemies/lion.png',
+        src: './assets/images/enemies/lion.png',
     },
 ];
 

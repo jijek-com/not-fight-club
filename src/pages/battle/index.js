@@ -25,8 +25,12 @@ export function renderBattlePage(container) {
                             <div class="battle__player">
                                 <div class="battle__name">${state.account.name}</div>
                                 <img src="${state.account.src}" alt="player image" class="character" width="230px">
-                                <div>HP: <span id="playerHP"> ${state.account.health} </span></div>   
-                            </div>
+                                    <div class="line"></div>
+                                    <div class="health-text">
+                                        <span id="playerHP"> ${state.account.health} / 100</span>
+                                    </div>
+                            </div>   
+                         
                             
                             <div class="zones" id="zones">
                                 <h3>Please pick 1 Attack zone and 2 Defence zones</h3> 
@@ -92,9 +96,13 @@ export function renderBattlePage(container) {
                         </div>
                             
                             <div class="battle__enemies">
-                            <div class="battle__name">${state.enemy.name}</div>
-                            <img src="${state.enemy.src}" alt="player image" class="character" width="230px">
-                            <div>HP: <span id="enemyHP">${state.enemy.health}</span>
+                                <div class="battle__name">${state.enemy.name}</div>
+                                <img src="${state.enemy.src}" alt="player image" class="character" width="230px">
+                            
+                                <div>
+                                    <div class="line"></div>
+                                    <div class="health-text"><span id="enemyHP">${state.enemy.health}</span>
+                                </div>
                             </div>
                           
                         </div>
@@ -113,7 +121,7 @@ export function renderBattlePage(container) {
                 <h2>Win </h2>
                 
                 <div class="modal__img">
-                    <img src="./../../assets/winner.png" alt="Image winner" >
+                    <img src="./assets/winner.png" alt="Image winner" >
                 </div>
               </div>
             </div>
@@ -123,10 +131,15 @@ export function renderBattlePage(container) {
     const battleLog = document.getElementById('battleLog');
     const modal = document.getElementById("resultModal");
     const span = document.getElementById("closeModal");
+    const root = document.documentElement;
 
     function updateLogs() {
         const lastIndex = battleLog.children.length / 2;
         const newLogs = state.logs?.slice(lastIndex);
+
+        root.style.setProperty('--player-health', state.account.health + '%');
+        root.style.setProperty('--enemy-health', state.enemy.health + '%');
+
 
         newLogs.forEach((log, i) => {
             const block = document.createElement("div");

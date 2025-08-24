@@ -29,6 +29,8 @@
     }
 
     &__player {
+      display: flex;
+      flex-direction: column;
       img {
         width: 230px;
         height: 320px;
@@ -39,6 +41,31 @@
         border-radius: 8px;
         border: 1px solid var(--border);
       }
+
+      .line:before {
+        position: absolute;
+        content: "";
+        width: var(--player-health);
+        height: 100%;
+        background: var(--active-c);
+        border-radius: 6px;
+      }
+    }
+
+    .line {
+      position: relative;
+      margin-top: 12px;
+      width: 100%;
+      height: 12px;
+      border-radius: 6px;
+      border: 1px solid var(--second-c);
+      transition: .3s ease;
+    }
+
+    .health-text {
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
     }
 
     &__enemies {
@@ -54,10 +81,18 @@
         border: 1px solid var(--border);
         transform: scaleX(-1);
       }
+
+      .line:before {
+        position: absolute;
+        content: "";
+        width: var(--enemy-health);
+        height: 100%;
+        background: var(--active-c);
+        border-radius: 6px;
+      }
     }
 
     footer {
-
       .right {
         display: flex;
         justify-content: end;
@@ -144,5 +179,17 @@
     float: right;
     font-size: 28px;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page {
+    .battle {
+
+      &__row {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   }
 }
